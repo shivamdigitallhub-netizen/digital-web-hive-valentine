@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love at First Click | Digital Web Hive</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.card {
+  width: 90%;
+  max-width: 420px;
+  height: 320px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.frame {
+  position: absolute;
+  opacity: 0;
+  animation: slide 5s infinite;
+}
+
+.frame:nth-child(1) { animation-delay: 0s; }
+.frame:nth-child(2) { animation-delay: 1s; }
+.frame:nth-child(3) { animation-delay: 2s; }
+.frame:nth-child(4) { animation-delay: 3s; }
+.frame:nth-child(5) { animation-delay: 4s; }
+
+@keyframes slide {
+  0% { opacity: 0; transform: translateY(10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+h1 {
+  font-size: 22px;
+  color: #1f2937;
+}
+
+.brand {
+  color: #e63946;
+  font-weight: 700;
+}
+
+.cta {
+  margin-top: 15px;
+  padding: 10px 22px;
+  background: #e63946;
+  color: white;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="frame">
+    <h1>💔 Your brand still not getting clients?</h1>
+  </div>
+
+  <div class="frame">
+    <h1>💡 Maybe it hasn’t found the right match…</h1>
+  </div>
+
+  <div class="frame">
+    <h1>❤️ Meet <span class="brand">Digital Web Hive</span></h1>
+  </div>
+
+  <div class="frame">
+    <h1>📈 Web • SEO • Ads • Growth</h1>
+  </div>
+
+  <div class="frame">
+    <h1>This Valentine,<br>fall in love with results.</h1>
+    <div class="cta">DM Us ❤️</div>
+  </div>
+</div>
+
+</body>
+</html>
