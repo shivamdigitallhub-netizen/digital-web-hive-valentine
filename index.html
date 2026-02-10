@@ -6,55 +6,63 @@
 <title>Love at First Click | Digital Web Hive</title>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #000);
+  background: linear-gradient(135deg, #0f172a, #020617);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
   overflow: hidden;
 }
 
 .card {
   width: 90%;
   max-width: 420px;
-  height: 320px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+  height: 380px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 30px;
+  padding: 32px;
   position: relative;
 }
 
 .frame {
   position: absolute;
   opacity: 0;
-  animation: slide 5s infinite;
+  animation: slide 12s infinite;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .frame:nth-child(1) { animation-delay: 0s; }
-.frame:nth-child(2) { animation-delay: 1s; }
-.frame:nth-child(3) { animation-delay: 2s; }
-.frame:nth-child(4) { animation-delay: 3s; }
-.frame:nth-child(5) { animation-delay: 4s; }
+.frame:nth-child(2) { animation-delay: 2.4s; }
+.frame:nth-child(3) { animation-delay: 4.8s; }
+.frame:nth-child(4) { animation-delay: 7.2s; }
+.frame:nth-child(5) { animation-delay: 9.6s; }
 
 @keyframes slide {
-  0% { opacity: 0; transform: translateY(10px); }
-  10% { opacity: 1; transform: translateY(0); }
-  30% { opacity: 1; }
-  40% { opacity: 0; }
+  0%   { opacity: 0; transform: translateY(18px); }
+  15%  { opacity: 1; transform: translateY(0); }
+  45%  { opacity: 1; }
+  60%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
 h1 {
   font-size: 22px;
-  color: #1f2937;
+  color: #111827;
+  line-height: 1.45;
+  margin: 0;
 }
 
 .brand {
@@ -62,14 +70,28 @@ h1 {
   font-weight: 700;
 }
 
+.services {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
 .cta {
-  margin-top: 15px;
-  padding: 10px 22px;
-  background: #e63946;
-  color: white;
-  border-radius: 30px;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: #25D366;
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.06);
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
 }
 </style>
 </head>
@@ -77,6 +99,7 @@ h1 {
 <body>
 
 <div class="card">
+
   <div class="frame">
     <h1>💔 Your brand still not getting clients?</h1>
   </div>
@@ -91,12 +114,20 @@ h1 {
 
   <div class="frame">
     <h1>📈 Web • SEO • Ads • Growth</h1>
+    <div class="services">We build brands that convert.</div>
   </div>
 
   <div class="frame">
     <h1>This Valentine,<br>fall in love with results.</h1>
-    <div class="cta">DM Us ❤️</div>
+    <a 
+      href="https://wa.me/919876543210?text=Hi%20Digital%20Web%20Hive%2C%20I%20want%20to%20grow%20my%20business%20this%20Valentine%20season%20%E2%9D%A4%EF%B8%8F"
+      class="cta"
+      target="_blank"
+    >
+      DM Us on WhatsApp ❤️
+    </a>
   </div>
+
 </div>
 
 </body>
