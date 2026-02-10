@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Love at First Click | Digital Web Hive</title>
 
 <style>
@@ -13,12 +13,11 @@
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: radial-gradient(circle at top, #020617, #000);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  overflow: hidden;
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
 .card {
@@ -26,43 +25,90 @@ body {
   max-width: 420px;
   height: 380px;
   background: #ffffff;
-  border-radius: 22px;
+  border-radius: 24px;
   box-shadow: 0 30px 60px rgba(0,0,0,0.45);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   padding: 32px;
   position: relative;
+  overflow: hidden;
 }
 
+/* FRAME BASE */
 .frame {
   position: absolute;
   opacity: 0;
-  animation: slide 12s infinite;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 24px;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
-.frame:nth-child(1) { animation-delay: 0s; }
-.frame:nth-child(2) { animation-delay: 2.4s; }
-.frame:nth-child(3) { animation-delay: 4.8s; }
-.frame:nth-child(4) { animation-delay: 7.2s; }
-.frame:nth-child(5) { animation-delay: 9.6s; }
+/* INDIVIDUAL FRAMES */
+.frame1 { animation-name: frame1; }
+.frame2 { animation-name: frame2; }
+.frame3 { animation-name: frame3; }
+.frame4 { animation-name: frame4; }
+.frame5 { animation-name: frame5; }
 
-@keyframes slide {
-  0%   { opacity: 0; transform: translateY(18px); }
-  15%  { opacity: 1; transform: translateY(0); }
-  45%  { opacity: 1; }
-  60%  { opacity: 0; }
-  100% { opacity: 0; }
+/* KEYFRAMES — NO OVERLAP */
+@keyframes frame1 {
+  0% {opacity:0}
+  5% {opacity:1}
+  20% {opacity:1}
+  25% {opacity:0}
+  100% {opacity:0}
 }
 
+@keyframes frame2 {
+  0% {opacity:0}
+  25% {opacity:0}
+  30% {opacity:1}
+  45% {opacity:1}
+  50% {opacity:0}
+  100% {opacity:0}
+}
+
+@keyframes frame3 {
+  0% {opacity:0}
+  50% {opacity:0}
+  55% {opacity:1}
+  70% {opacity:1}
+  75% {opacity:0}
+  100% {opacity:0}
+}
+
+@keyframes frame4 {
+  0% {opacity:0}
+  75% {opacity:0}
+  80% {opacity:1}
+  90% {opacity:1}
+  95% {opacity:0}
+  100% {opacity:0}
+}
+
+@keyframes frame5 {
+  0% {opacity:0}
+  90% {opacity:0}
+  95% {opacity:1}
+  100% {opacity:1}
+}
+
+/* TEXT STYLES */
 h1 {
   font-size: 22px;
+  line-height: 1.5;
   color: #111827;
-  line-height: 1.45;
   margin: 0;
+}
+
+.sub {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #374151;
 }
 
 .brand {
@@ -70,15 +116,10 @@ h1 {
   font-weight: 700;
 }
 
-.services {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 14px;
-}
-
+/* CTA */
 .cta {
-  margin-top: 24px;
-  padding: 14px 28px;
+  margin-top: 26px;
+  padding: 14px 30px;
   background: #25D366;
   color: #ffffff;
   border-radius: 999px;
@@ -86,12 +127,6 @@ h1 {
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta:hover {
-  transform: scale(1.06);
-  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
 }
 </style>
 </head>
@@ -100,28 +135,28 @@ h1 {
 
 <div class="card">
 
-  <div class="frame">
+  <div class="frame frame1">
     <h1>💔 Your brand still not getting clients?</h1>
   </div>
 
-  <div class="frame">
+  <div class="frame frame2">
     <h1>💡 Maybe it hasn’t found the right match…</h1>
   </div>
 
-  <div class="frame">
+  <div class="frame frame3">
     <h1>❤️ Meet <span class="brand">Digital Web Hive</span></h1>
+    <div class="sub">We build brands that convert.</div>
   </div>
 
-  <div class="frame">
+  <div class="frame frame4">
     <h1>📈 Web • SEO • Ads • Growth</h1>
-    <div class="services">We build brands that convert.</div>
   </div>
 
-  <div class="frame">
+  <div class="frame frame5">
     <h1>This Valentine,<br>fall in love with results.</h1>
-    <a 
-      href="https://wa.me/919876543210?text=Hi%20Digital%20Web%20Hive%2C%20I%20want%20to%20grow%20my%20business%20this%20Valentine%20season%20%E2%9D%A4%EF%B8%8F"
+    <a
       class="cta"
+      href="https://wa.me/64212456560?text=Hi%20Digital%20Web%20Hive%2C%20I%20want%20to%20grow%20my%20business%20this%20Valentine%20%E2%9D%A4%EF%B8%8F"
       target="_blank"
     >
       DM Us on WhatsApp ❤️
