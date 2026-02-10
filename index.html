@@ -10,23 +10,30 @@
   box-sizing: border-box;
 }
 
+/* 🌸 VALENTINE BACKGROUND */
 body {
   margin: 0;
   height: 100vh;
-  background: radial-gradient(circle at top, #020617, #000);
+  background: linear-gradient(
+    135deg,
+    #ff758c,
+    #ff7eb3,
+    #ffd1dc
+  );
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", system-ui, sans-serif;
 }
 
+/* CARD */
 .card {
   width: 90%;
   max-width: 420px;
   height: 380px;
   background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+  border-radius: 26px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +43,7 @@ body {
   overflow: hidden;
 }
 
-/* FRAME BASE */
+/* FRAMES */
 .frame {
   position: absolute;
   opacity: 0;
@@ -46,14 +53,13 @@ body {
   animation-iteration-count: infinite;
 }
 
-/* INDIVIDUAL FRAMES */
+/* FRAME TIMING (NO OVERLAP) */
 .frame1 { animation-name: frame1; }
 .frame2 { animation-name: frame2; }
 .frame3 { animation-name: frame3; }
 .frame4 { animation-name: frame4; }
 .frame5 { animation-name: frame5; }
 
-/* KEYFRAMES — NO OVERLAP */
 @keyframes frame1 {
   0% {opacity:0}
   5% {opacity:1}
@@ -96,10 +102,10 @@ body {
   100% {opacity:1}
 }
 
-/* TEXT STYLES */
+/* TEXT */
 h1 {
   font-size: 22px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #111827;
   margin: 0;
 }
@@ -112,14 +118,14 @@ h1 {
 }
 
 .brand {
-  color: #e63946;
+  color: #e11d48;
   font-weight: 700;
 }
 
 /* CTA */
 .cta {
-  margin-top: 26px;
-  padding: 14px 30px;
+  margin-top: 28px;
+  padding: 14px 32px;
   background: #25D366;
   color: #ffffff;
   border-radius: 999px;
@@ -127,6 +133,12 @@ h1 {
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
+  box-shadow: 0 12px 25px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
 }
 </style>
 </head>
